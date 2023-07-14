@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    uses: ./.github/workflows/dockerdp.yaml
+    uses: ./.github/workflows/test.yaml
     name: Test TypeScript code
 
   build:
