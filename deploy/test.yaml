@@ -3,9 +3,8 @@ run-name: "build Docker image [${{ github.sha }}] Triggering test by ${{ github.
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    tags:
+      -"v*.*.*"
 
 jobs:
   test:
