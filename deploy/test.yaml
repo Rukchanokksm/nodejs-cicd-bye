@@ -8,9 +8,9 @@ on:
     branches: [main]
 
 jobs:
-  build:
-  name: build TypeScript code for event ${{ github.event_name }} on ${{ github.ref }}
-        runs-os: [ubuntu-latest]
+  test:
+  name: test TypeScript code for event ${{ github.event_name }} on ${{ github.ref }}
+        runs-os: ubuntu-latest
     steps:
       -
         name: Checkout
@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/praticenodecicd:${{clockbox:latest}}
